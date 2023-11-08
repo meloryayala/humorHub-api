@@ -1,4 +1,9 @@
+using HumorHub.Data;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddDbContext<HumorContext>(options => options.UseNpgsql(builder.Configuration.GetConnectionString("HumorConnection")));
 
 // Add services to the container.
 
