@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="HumorHub_facingfear@41x.h.filess.io" uuid="f60ae690-dbab-4f3a-af9e-dc92cbb642a1">
-      <driver-ref>mysql.8</driver-ref>
+    <data-source source="LOCAL" name="Microsoft SQL Server (JetBrains)" uuid="84d22440-5b1d-41f3-bbe8-a75d11c4dca4">
+      <driver-ref>sqlserver.jb</driver-ref>
       <synchronize>true</synchronize>
-      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://41x.h.filess.io:3307/HumorHub_facingfear</jdbc-url>
+      <configured-by-url>true</configured-by-url>
+      <jdbc-driver>com.jetbrains.jdbc.sqlserver.SqlServerDriver</jdbc-driver>
+      <jdbc-url>Data Source=sr12.firestorm.ch;Initial Catalog=melory;User Id=meli;Password=m978hR%a4</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
   </component>
