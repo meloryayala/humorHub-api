@@ -7,8 +7,6 @@ public class ReadJokeDto
     
     public int Id { get; set; }
     
-    public DateTime CreatedAt { get; set; }
-    
     public string Question { get; set; }
     
     public string Answer { get; set; }

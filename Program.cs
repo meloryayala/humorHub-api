@@ -5,7 +5,7 @@ var builder = WebApplication.CreateBuilder(args);
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 
 builder.Services.AddDbContext<HumorContext>(opts =>
-    opts.UseSqlServer(connectionString));
+    opts.UseLazyLoadingProxies().UseSqlServer(connectionString));
 
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
