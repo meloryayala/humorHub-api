@@ -1,18 +1,13 @@
 using System.ComponentModel.DataAnnotations;
-using Postgrest.Attributes;
-using Postgrest.Models;
 
 namespace HumorHub.Models;
 
-[Table("joke")]
-public class Category : BaseModel
+public class Category
 {
-    [PrimaryKey("id", false)]
+    [Key]
+    [Required]
     public int Id { get; set; }
     
-    [Column("name")]
+    [Required(ErrorMessage = "The category name is required")]
     public string Name { get; set; }
-    
-    [Reference(typeof(Joke))]
-    public virtual ICollection<Joke> Jokes { get; set; }
 }

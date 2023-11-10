@@ -10,4 +10,5 @@ public class HumorContext : DbContext
     }
     
     public DbSet<Joke> Jokes { get; set; }
+    public DbSet<Category> Categories { get; set; }
 }
