@@ -8,6 +8,16 @@ public class HumorContext : DbContext
     {
         
     }
+
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+        modelBuilder.Entity<Category>()
+            .HasMany(e => e.Jokes)
+            .WithOne(e => e.Category)
+            .HasForeignKey(e => e.CategoryId)
+            .HasPrincipalKey(e => e.Id)
+            .OnDelete(DeleteBehavior.Restrict);
+    }
     
     public DbSet<Joke> Jokes { get; set; }
     public DbSet<Category> Categories { get; set; }

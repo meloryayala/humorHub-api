@@ -10,4 +10,6 @@ public class Category
     
     [Required(ErrorMessage = "The category name is required")]
     public string Name { get; set; }
+    
+    public virtual IEnumerable<Joke> Jokes { get; set; }
 }

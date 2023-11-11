@@ -38,10 +38,10 @@ public class CategoryController : ControllerBase
     [HttpGet("{id}")]
     public IActionResult ReadCategoryById(int id)
     {
-        var category = _context.Categories.FirstOrDefault(category => category.Id == id);
-        if (category == null) return NotFound();
-        var categoryDto = _mapper.Map<CreateUpdateCategoryDto>(category);
-        return Ok(categoryDto);
+            var category = _context.Categories.FirstOrDefault(category => category.Id == id);
+            if (category == null) return NotFound();
+            var categoryDto = _mapper.Map<ReadCategoryDto>(category);
+            return Ok(categoryDto);
     }
 
     [HttpPut("{id}")]
