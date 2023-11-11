@@ -4,6 +4,15 @@ using Microsoft.EntityFrameworkCore;
 var builder = WebApplication.CreateBuilder(args);
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy(name: "MyPolicy",
+        policy =>
+        {
+            policy.WithOrigins("http://localhost:3000");
+        });
+});
+
 builder.Services.AddDbContext<HumorContext>(opts =>
     opts.UseLazyLoadingProxies().UseSqlServer(connectionString));
 
@@ -27,6 +36,7 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
+app.UseCors("MyPolicy");
 app.UseAuthorization();
 
 app.MapControllers();
