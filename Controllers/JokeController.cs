@@ -1,3 +1,4 @@
+using System.Globalization;
 using AutoMapper;
 using HumorHub.Data;
 using HumorHub.Data.Dtos;
@@ -25,9 +26,8 @@ public class JokeController : ControllerBase
         var joke = _mapper.Map<Joke>(jokeDto);
         _context.Jokes.Add(joke);
         _context.SaveChanges();
-        return CreatedAtAction(nameof(ReadJokeById), 
-            new { Id = joke.Id }, 
-            joke);
+        var addedJokeDto = _mapper.Map<ReadJokeDto>(joke); 
+        return CreatedAtAction(nameof(ReadJokeById), new { Id = joke.Id }, addedJokeDto);
     }
 
     [HttpGet]
@@ -56,7 +56,8 @@ public class JokeController : ControllerBase
         if (joke == null) return NotFound();
         _mapper.Map(jokeDto, joke);
         _context.SaveChanges();
-        return NoContent();
+        var updatedJokeDto = _mapper.Map<ReadJokeDto>(joke);
+        return Ok(updatedJokeDto);
     }
 
     [HttpDelete("{id}")]

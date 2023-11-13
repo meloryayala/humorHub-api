@@ -25,7 +25,8 @@ public class CategoryController : ControllerBase
         var category = _mapper.Map<Category>(createUpdateCategoryDto);
         _context.Categories.Add(category);
         _context.SaveChanges();
-        return CreatedAtAction(nameof(ReadCategoryById), new { Id = category.Id }, category);
+        var addedCategoDto = _mapper.Map<ReadCategoryDto>(category);
+        return CreatedAtAction(nameof(ReadCategoryById), new { Id = category.Id }, addedCategoDto);
     }
 
     [HttpGet]
@@ -51,7 +52,8 @@ public class CategoryController : ControllerBase
         if (category == null) return NotFound();
         _mapper.Map(categoryDto, category);
         _context.SaveChanges();
-        return NoContent();
+        var updatedCategoryDto = _mapper.Map<ReadCategoryDto>(category);
+        return Ok(updatedCategoryDto);
     }
 
     [HttpDelete("{id}")]
