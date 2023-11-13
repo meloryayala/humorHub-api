@@ -1,11 +1,18 @@
 ## 💬 Movies Web Api
 > Web API for jokes ;)
+<br>
+
+
+
+https://github.com/meloryayala/humorHub-api/assets/79602378/620eba8d-e7b4-492e-b420-209d4f986624
+
 
 <br>
 
-...Soon image
+The API                     |    Frontend consuming API   |       Mobile
+:--------------------------:|:---------------------------:|:---------------------------:
+<img src="https://github.com/meloryayala/humorHub-api/assets/79602378/bb357044-b6d5-4bc4-9acc-0088094a6d6c" width="50%" >  | 
 
-### the frontend will be available 
 
 <br><br>
 
