@@ -11,7 +11,7 @@
 
 ## 🛠️ Tools & frameworks
 
-![My Skills](https://skillicons.dev/icons?i=cs,dotnet,supabase,postgres)
+![My Skills](https://skillicons.dev/icons?i=cs,dotnet) <img src="https://github.com/meloryayala/humorHub-api/assets/79602378/55e130e0-9ab2-4348-99d8-d635df162b91" width="50px">
 <br><br><br>
 
 
