@@ -8,7 +8,8 @@ public class JokeProfile : Profile
 {
     public JokeProfile()
     {
-        CreateMap<Joke, ReadJokeDto>();
+        CreateMap<Joke, ReadJokeDto>()
+            .ForMember(dest => dest.CategoryName, opt => opt.MapFrom(src => src.Category.Name));
         CreateMap<CreateJokeDto, Joke>();
         CreateMap<UpdateJokeDto, Joke>();
     }

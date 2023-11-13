@@ -4,7 +4,6 @@ namespace HumorHub.Data.Dtos;
 
 public class ReadJokeDto
 {
-    
     public int Id { get; set; }
     
     public string Question { get; set; }
@@ -13,5 +12,5 @@ public class ReadJokeDto
     
     public int CategoryId { get; set; }
     
-    public virtual Category Category { get; set; }
+    public string CategoryName { get; set; }
 }
