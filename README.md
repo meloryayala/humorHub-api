@@ -17,7 +17,7 @@ The API                     |    Frontend consuming API   |       Mobile
 :--------------------------:|:---------------------------:|:---------------------------:
 <img src="https://github.com/meloryayala/humorHub-api/assets/79602378/bb357044-b6d5-4bc4-9acc-0088094a6d6c">  | ![image](https://github.com/meloryayala/humorHub-api/assets/79602378/9b387873-9aaf-456d-8521-615d2fccefe4)  |  ![image](https://github.com/meloryayala/humorHub-api/assets/79602378/e470c180-ba6b-4e40-ba6a-15451a23031a)
 
-The frontend consuming the APi -> [HumorHub](https://humorhub-api.vercel.app/)
+[↗️ Go to **HumorHub** website ↗️](https://humorhub-api.vercel.app/)
 
 <br> <br>
 
